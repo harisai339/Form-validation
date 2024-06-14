@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Form Validation | 77/100 Projects By CodeBustler</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/81d73e8e4d.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Contact Form</h1>
+			<form>
+				<div class="formItems">
+					<input
+						type="text"
+						x
+						placeholder="Fullname"
+						id="nameInput"
+						onkeyup="validateName()"
+					/>
+					<p id="name-error" class="error"></p>
+				</div>
+
+				<div class="formItems">
+					<input
+						type="text"
+						placeholder="Mobile Number"
+						id="numberInput"
+						onkeyup="validatePhone()"
+					/>
+					<p id="number-error" class="error"></p>
+				</div>
+
+				<div class="formItems">
+					<input
+						type="email"
+						placeholder="Email Id"
+						id="emailInput"
+						onkeyup="validateEmail()"
+					/>
+					<p id="email-error" class="error"></p>
+				</div>
+
+				<div class="formItems">
+					<textarea
+						name="messageInput"
+						id="messageInput"
+						rows="4"
+						placeholder="Message..."
+						onkeyup="validateMessage()"
+					></textarea>
+					<p id="message-error" class="error-textarea"></p>
+				</div>
+
+				<button onclick="return validateForm()">Submit</button>
+				<p id="submit-error"></p>
+			</form>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
